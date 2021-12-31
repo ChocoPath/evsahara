@@ -4,9 +4,11 @@ LABEL maintainer="Worsley Quaye"
 
 
 # Set work directory
-WORKDIR /dist
+WORKDIR /var/www/html/
 
 # Copy project
-COPY . /dist/
+COPY . /var/www/html/
 
 EXPOSE 80
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
