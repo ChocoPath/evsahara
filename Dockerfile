@@ -8,4 +8,5 @@ WORKDIR /dist
 
 # Copy project
 COPY . /dist/
-RUN index.html
+
+EXPOSE 80
