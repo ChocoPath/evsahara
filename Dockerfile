@@ -1,14 +1,10 @@
-FROM ubuntu:latest
+FROM httpd:2.4
 
 LABEL maintainer="Worsley Quaye" 
 
 
 # Set work directory
-WORKDIR /var/www/html/
+#WORKDIR /var/www/html/
 
 # Copy project
-COPY . /var/www/html/
-
-EXPOSE 80
-CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
+COPY . /usr/local/apache2
