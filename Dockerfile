@@ -2,9 +2,6 @@ FROM httpd:2.4
 
 LABEL maintainer="Worsley Quaye" 
 
+WORKDIR /usr/local/apache2/htdocs/
+COPY . /usr/local/apache2/htdocs/
 
-# Set work directory
-#WORKDIR /var/www/html/
-
-# Copy project
-COPY . /usr/local/apache2
